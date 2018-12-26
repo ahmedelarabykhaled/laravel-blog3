@@ -51,7 +51,7 @@ textarea:focus
 	    @endif
 	</div>
 	<div class="p-4">
-		<p>{{$post->body}}</p>
+		<p>{!!$post->body!!}</p>
 	</div>
 
 
@@ -66,7 +66,7 @@ textarea:focus
 			</div>
 			<div class="card-body">
 				<div class="comment-body rounded p-3">
-					{{$comment->body}}
+					{!!$comment->body!!}
 				</div>
 			</div>
 		</div>
@@ -83,7 +83,7 @@ textarea:focus
 		<form method="POST" action="{{ url('comment')}}">
 			@csrf()
 			<input type="hidden" name="post" value="{{$post->id}}">
-			<textarea class="form-control" name="body"></textarea>
+			<textarea class="form-control" id="editor" name="body"></textarea>
 			<button class="btn btn-warning mt-3" type="submit">Add Comment</button>
 		</form>
 	</div>

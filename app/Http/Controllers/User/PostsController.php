@@ -102,7 +102,13 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $post = Post::find($id);
+
+        $post->body = $request->body;
+
+        $post->update();
+
+        return back();
     }
 
     /**

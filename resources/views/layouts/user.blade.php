@@ -3,7 +3,6 @@
 <head>
 
 	<title>.Blog</title>
-	<link rel="icon" href="{{ url('images/b.png') }}" type="image/png">
 
 	<link rel="stylesheet" type="text/css" href="{{ url('css/main resources/bootstrap.min.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ url('css/main resources/fontawesome.min.css') }}">
@@ -52,6 +51,10 @@
 		{
 			color: #f84;
 		}
+		#user-image
+		{
+			width: 50px;
+		}
 	</style>
 </head>
 <body>
@@ -60,7 +63,7 @@
 	<section>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		  <a class="navbar-brand" href="{{ url('posts') }}">
-		  	<img src="{{ url('images/blog4.png') }}" id="navlogo" class="rounded">
+		  	<h1>BLOG</h1>
 		  </a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
@@ -81,7 +84,9 @@
 		  	@if(Auth::check())
 		  		<div class="nav-item dropdown">
 			        <a id="user-logined" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			         <img src="{{url('images/no admin.png')}}" class="rounded-circle mr-3" id="user-image">
 			         {{Auth::user()->name}}
+			         
 			        </a>
 			        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 			          <a class="dropdown-item" href="{{ url('logout') }}">Logout</a>
@@ -129,6 +134,14 @@
 	<script type="text/javascript" src="{{ url('js/main resources/popper.min.js') }}"></script>
 	<script type="text/javascript" src="{{ url('js/main resources/bootstrap.min.js') }}"></script>
 	<script type="text/javascript" src="{{ url('js/js/owl.carousel.min.js') }}"></script>
+	<script src="{{url('js/js/ckeditor.js')}}"></script>
 	<script type="text/javascript" src="{{ url('js/js/mine.js') }}"></script>
+	<script>
+    ClassicEditor
+        .create( document.querySelector( '#editor' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+	</script>
 </body>
 </html>

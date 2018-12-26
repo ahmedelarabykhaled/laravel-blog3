@@ -37,7 +37,7 @@
 			<input type="text" name="title" class="form-control mb-4">
 
 			<h4>Content :</h4>
-			<textarea type="text" name="body" class="form-control mb-4"></textarea>
+			<textarea id="editor" type="text" name="body" class="form-control mb-4"></textarea>
 
 			<h4>Category :</h4>
 			<select name="category" class="form-control mb-4">
@@ -45,6 +45,8 @@
 			  	<option value="{{$category->id}}">{{$category->category}}</option>
 			  @endforeach
 			</select>
+
+
 
 			<h4>Image :</h4>
 			<input type="file" name="image[]" class=" mb-4" multiple>

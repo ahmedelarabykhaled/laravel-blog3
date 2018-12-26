@@ -90,7 +90,7 @@
               <ul class="navbar-nav border-left flex-row ">
                 
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle text-nowrap px-3" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle text-nowrap px-3 py-0" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                     
                     @if(Auth::guard('admin')->user()->image != null)
                       <img class="user-avatar rounded-circle mr-2" src="{{url('admins',Auth::guard('admin')->user()->image->image_name)}}" alt="User Avatar">

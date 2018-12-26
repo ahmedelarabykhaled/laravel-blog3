@@ -51,7 +51,7 @@
 						@endif
 					</div>
 					<div class="col-6 content">
-						<p>{{$post->body}}</p>
+						<p>{!!$post->body!!}</p>
 					</div>
 				</div>
 			</div>

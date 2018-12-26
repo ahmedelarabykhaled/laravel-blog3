@@ -36,7 +36,7 @@ Blog Comments
                         @foreach($comments as $comment)
                             <tr>
                                 <td>{{$comment->post->title}}</td>
-                                <td>{{$comment->body}}</td>
+                                <td>{!!$comment->body!!}</td>
                                 <td>{{$comment->user->name}}</td>
                                 <td>
                                     <form method="POST" action="{{url('admin/comments',$comment->id)}}">
